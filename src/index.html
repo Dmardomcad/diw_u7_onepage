@@ -5,33 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/sass/main.sass">
+    <script defer src="./assets/javascript/index.js"></script>
     <title>Streets of Farra</title>
 </head>
 <body>
     <header class="header">
-        <section class="header__section--logo">
-            <img class="header__logo" src="./assets/img/logo_simple.png" alt="imagen del logotipo">
-            <h1 class="header__logo--title">STREETS OF FARRA</h1>
-        </section>
+        <nav class="navbar">
+            <img class="navbar__logo" src="./assets/img/logo_simple.png" alt="logotipo">
+            <ul class="navbar__lista">
+                <li class="navbar__elemento">Personajes</li>
+                <li class="navbar__elemento">Mapas</li>
+                <li class="navbar__elemento">Nosotros</li>
+            </ul>
+        </nav>
         <video class="header__video" autoplay loop>
             <source src="./assets/video/abandoned_factory.webm">
         </video>
         <h2>Bienvenidos a Streets of Farra, el nuevo beatem'up del futuro.</h2>
+        <section class="header__section--logo">
+            <img class="header__logo" src="./assets/img/logo_simple.png" alt="imagen del logotipo">
+            <h1 class="header__logo--title">STREETS OF FARRA</h1>
+        </section>
+<!--         <video class="header__video" autoplay loop>
+            <source src="./assets/video/abandoned_factory.webm">
+        </video>
+        <h2>Bienvenidos a Streets of Farra, el nuevo beatem'up del futuro.</h2> -->
     </header>
 
     <main>
         <section class="characters">
             <h3 class="characters--title"> Personajes </h3>
-            <p>Algo va aquí...</p>
+            <p>En Streets of Farra vas a encontrar diversos personajes con ganas de gresca.</p>
+            <div class="contenedor">
+
+            </div>
         </section>
-        <section>
-            <h3>El mundo de Streets of Farra</h3>
+        <section class="info">
+            <h3 class="info--title">El mundo de Streets of Farra</h3>
             <p>En la ciudad de Farra se puede encontrar todo tipo de pintorescos personajes, pero no es lo único que tu vista va a degustar.</p>
             <p>En Streets of Farra vas a encontrarte diversos paisajes, desde las zonas más naturales de las afueras de la ciudad hasta la vieja fábrica abandonada que se cae a pedazos.</p>
         </section>
         <section class="maps">
-            <h3 class="maps--titles">MAPAS</h3>
+            <h3 class="maps--title">MAPAS</h3>
             <p>Aquí va el carousel...</p>
+        </section>
+        <section class="music">
+            <h3 class="music--title">MÚSICA</h3>
+            <p>Diferentes OST de nuestro juego... placeholder</p>
+            <audio src="./assets/sound/letter_from_an_old friend.mp3" controls></audio>
         </section>
     </main>
     

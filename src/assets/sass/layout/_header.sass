@@ -3,6 +3,21 @@
     align-content: center
     align-items: center
     justify-content: center
+.navbar
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background-color: black
+    padding: 10px
+    .navbar__logo
+        width: 100px
+        height: 100px
+    .navbar__lista
+        display: flex
+        list-style-type: none
+        .navbar__elemento
+            padding: 25px
+            color: white
 
 h2
     font-size: 25px
@@ -10,24 +25,28 @@ h2
     font-family: 'Press Start 2P', cursive
     margin: 0
     padding: 30px
-    bottom: 0px
-    position: absolute
-
+    bottom: 50vh
+    position: relative
 .header__section--logo
-    display: flex
     justify-content: center
-
+    align-items: center
+.header__logo
+    height: 300px
+    width: 300px
+    display: flex
+    margin: auto
 .header__logo--title
     display: flex
     align-self: center
-    position: absolute
-    font-family: 'Press Start 2P', cursive
-    font-size: 5vmin
-    color: #1d9099
-    text-shadow: 1vmin 1vmin 0 #FF7F11, -1vmin -1vmin 0 #5BC0EB
+    font-family: 'Fugaz One', cursive
+    font-size: 8vmin
+    color: #192270
+    text-shadow: -1vmin 0 #36409c
     margin: 0
-    padding: 30px
+    padding: 40px
     grid-area: text
-    top: 60vh
+    top: 20vh
+    justify-content: center
+    width: 100%
 .header__video
     width: 100%
