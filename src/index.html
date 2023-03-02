@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/sass/main.sass">
-    <script defer src="./assets/javascript/index.js"></script>
     <title>Streets of Farra</title>
 </head>
 <body>
@@ -52,7 +51,17 @@
         </section>
         <section class="maps">
             <h2 class="maps--title">MAPAS</h2>
-            <p>Aquí va el carousel...</p>
+            <div class="carrousel">
+                <div class="grande">
+                    <img src="#" alt="imagen 1" class="img">
+                    <img src="#" alt="imagen 2" class="img">
+                </div>
+
+                <ul class="puntos">
+                    <li class="punto activo"></li>
+                    <li class="punto"></li>
+                </ul>
+            </div>
         </section>
         <section class="music">
             <h2 class="music--title">MÚSICA</h2>
@@ -68,5 +77,25 @@
             <ul>Algo 3...</ul>
         </li>
     </footer>
+    <script>
+const grande = document.querySelector('.grande')
+const punto = document.querySelectorAll('.punto')
+console.log(punto)
+
+punto.forEach((cadaPunto, i) => {
+    punto[i].addEventListener('click',()=>{
+        
+        let posicion = i
+        let operacion = posicion * -50
+
+        grande.style.transform = `translateX(${operacion}%)`
+
+        punto.forEach( (cadaPunto, i)=>{
+            punto[i].classList.remove('activo')
+        })
+        punto[i].classList.add('activo')
+    })
+})
+    </script>
 </body>
 </html>
