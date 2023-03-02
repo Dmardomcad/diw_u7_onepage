@@ -34,15 +34,20 @@
             <h2 class="characters--title"> Personajes </h2>
             <p class="characters--text">En Streets of Farra vas a encontrar diversos personajes con ganas de gresca.</p>
 
-            <div class="tabs--container">
-                <h2>Tabs de personajes</h2>
+            <div class="contenedor">
                 <ul class="tabs">
-                    <li>Pj 1</li>
-                    <li>Pj 2</li>
-                    <li>Pj 3</li>
-                    <li>Pj 3</li>
+                    <li class="li activo">Pj 1</li>
+                    <li class="li">Pj 2</li>
+                    <li class="li">Pj 3</li>
                 </ul>
+                
+                <div class="subcontenedor">
+                    <div class="bloque activo">Lore</div>
+                    <div class="bloque">Lore</div>
+                    <div class="bloque">Lore</div>
+                </div>
             </div>
+
         </section>
         <section class="info">
             <h2 class="info--title">El mundo de Streets of Farra</h2>
@@ -77,25 +82,47 @@
             <ul>Algo 3...</ul>
         </li>
     </footer>
-    <script>
-const grande = document.querySelector('.grande')
-const punto = document.querySelectorAll('.punto')
-console.log(punto)
+<script>
+    const grande = document.querySelector('.grande')
+    const punto = document.querySelectorAll('.punto')
+    console.log(punto)
 
-punto.forEach((cadaPunto, i) => {
-    punto[i].addEventListener('click',()=>{
-        
-        let posicion = i
-        let operacion = posicion * -50
+    punto.forEach((cadaPunto, i) => {
+        punto[i].addEventListener('click',()=>{
+            
+            let posicion = i
+            let operacion = posicion * -50
 
-        grande.style.transform = `translateX(${operacion}%)`
+            grande.style.transform = `translateX(${operacion}%)`
 
-        punto.forEach( (cadaPunto, i)=>{
-            punto[i].classList.remove('activo')
+            punto.forEach( (cadaPunto, i)=>{
+                punto[i].classList.remove('activo')
+            })
+            punto[i].classList.add('activo')
         })
-        punto[i].classList.add('activo')
     })
-})
+
+    const li = document.querySelectorAll('.li')
+    const bloque = document.querySelectorAll('.bloque')
+
+    li.forEach((cadaLi, i)=>{
+        li[i].addEventListener('click', ()=>{
+            li.forEach( (cadaLi, i)=>{
+                li[i].classList.remove('activo')
+                bloque[i].classList.remove('activo')
+            })
+            li[i].classList.add('activo')
+            bloque[i].classList.add('activo')
+
+
+        })
+    })
+
+
+
+
+
+
     </script>
 </body>
 </html>

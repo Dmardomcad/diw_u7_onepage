@@ -9,6 +9,7 @@ main
     display: flex
     flex-wrap: wrap
     padding: 15px
+    justify-content: center
 .info--title
     display: flex
     justify-content: center
@@ -55,6 +56,7 @@ main
     flex-flow: row nowrap
     justify-content: center
     align-items: center
+    list-style-type: none
 .carrousel .punto
     width: 2em
     height: 2em
@@ -63,3 +65,34 @@ main
     background-color: white
 .carrousel .punto.activo
     background-color: orange
+
+.contenedor
+    width: 90%
+    max-width: 120em
+    padding: 1em
+.contenedor .tabs
+    width: 100%
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+.contenedor .li
+    padding: 1em
+    margin: 0 1em 0 0
+    list-style-type: none
+    transition: all .5s ease
+.contenedor .li.activo
+    background-color: lightskyblue
+    color: white
+.contenedor .subcontenedor
+    min-height: 10vh
+    position: relative
+.contenedor .bloque
+    padding: 1em
+    margin: 1em
+    position: absolute
+    top: 0
+    opacity: 0
+    transition: all .5s ease
+.contenedor .bloque.activo
+    opacity: 1
