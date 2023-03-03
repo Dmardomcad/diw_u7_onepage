@@ -60,10 +60,14 @@
                 <div class="grande">
                     <img src="#" alt="imagen 1" class="img">
                     <img src="#" alt="imagen 2" class="img">
+                    <img src="#" alt="imagen 3" class="img">
+                    <img src="#" alt="imagen 4" class="img">
                 </div>
 
                 <ul class="puntos">
                     <li class="punto activo"></li>
+                    <li class="punto"></li>
+                    <li class="punto"></li>
                     <li class="punto"></li>
                 </ul>
             </div>
@@ -94,7 +98,7 @@
         punto[i].addEventListener('click',()=>{
             
             let posicion = i
-            let operacion = posicion * -50
+            let operacion = posicion * -25
 
             grande.style.transform = `translateX(${operacion}%)`
 
