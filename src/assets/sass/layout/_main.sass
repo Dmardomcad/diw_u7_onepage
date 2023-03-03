@@ -5,6 +5,8 @@ main
 .characters--title
     display: flex
     justify-content: center
+    font-family: 'Lora', serif
+
 .info
     display: flex
     flex-wrap: wrap
@@ -15,6 +17,7 @@ main
     justify-content: center
     width: 100%
     align-items: center
+    font-family: 'Lora', serif
 .maps
     display: flex
     flex-wrap: wrap
@@ -24,6 +27,8 @@ main
     display: flex
     justify-content: center
     width: 100%
+    font-family: 'Lora', serif
+
 .characters--title
     display: flex
     justify-content: center
@@ -81,18 +86,21 @@ main
     margin: 0 1em 0 0
     list-style-type: none
     transition: all .5s ease
+    font-family: 'Lora', serif
 .contenedor .li.activo
     background-color: lightskyblue
     color: white
 .contenedor .subcontenedor
-    min-height: 10vh
+    height: 50vh
     position: relative
 .contenedor .bloque
     padding: 1em
     margin: 1em
     position: absolute
-    top: 0
+    // top: 0
+    height: 300px
     opacity: 0
+    bottom: 3vh
     transition: all .5s ease
 .contenedor .bloque.activo
     opacity: 1
