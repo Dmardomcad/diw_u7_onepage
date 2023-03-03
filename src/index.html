@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/sass/main.sass">
+    <script defer src="./assets/javascript/index.js"></script>
     <title>Streets of Farra</title>
 </head>
 <body>
@@ -20,6 +21,8 @@
         <section class="video">
             <video class="header__video" loop="true" autoplay="autoplay" muted>
                 <source src="./assets/video/pixel_art.webm">
+                <source src="./assets/video/pixel_art.mp4">
+                Su navegador no soporta contenido multimedia.
             </video>
             <h2 class="video_text">Bienvenidos a Streets of Farra, el nuevo beatem'up del futuro.</h2>
         </section>
@@ -32,7 +35,7 @@
     <main>
         <section class="characters">
             <h2 class="characters--title"> Personajes </h2>
-            <p class="characters--text">En Streets of Farra vas a encontrar diversos personajes con ganas de gresca.</p>
+            <p class="characters--text">En Streets of Farra vas a encontrar diversos personajes con ganas de gresca.En este juego controlarás a Joselu, tendrás que conseguir vapes derrotando a los diferentes enemigos, ten cuidado con los hooligans salvajes que protegen a Ortegano, el vapeador octogenario.</p>
 
             <div class="contenedor">
                 <ul class="tabs">
@@ -42,9 +45,9 @@
                 </ul>
                 
                 <div class="subcontenedor">
-                    <img class="bloque activo" src="./assets/img/ortegano.svg" alt="Final Boss"></img>
-                    <img class="bloque" src="./assets/img/final-boss.svg"></img>
-                    <div class="bloque">Lore 3</div>
+                    <img src="./assets/img/ortegano.svg" alt="Final Boss" class="bloque activo"></img>
+                    <img class="bloque" src="./assets/img/joseluis.svg"></img>
+                    <img class="bloque" src="./assets/img/hooliganeitor.svg"></img>
                 </div>
             </div>
 
@@ -58,10 +61,10 @@
             <h2 class="maps--title">MAPAS</h2>
             <div class="carrousel">
                 <div class="grande">
-                    <img src="#" alt="imagen 1" class="img">
-                    <img src="#" alt="imagen 2" class="img">
-                    <img src="#" alt="imagen 3" class="img">
-                    <img src="#" alt="imagen 4" class="img">
+                    <img src="./assets/img/bg_1.png" alt="imagen 1" class="img">
+                    <img src="./assets/img/bg_2.png" alt="imagen 2" class="img">
+                    <img src="./assets/img/bg_3.png" alt="imagen 3" class="img">
+                    <img src="./assets/img/bg_4.webp" alt="imagen 4" class="img">
                 </div>
 
                 <ul class="puntos">
@@ -74,62 +77,17 @@
         </section>
         <section class="music">
             <h2 class="music--title">MÚSICA</h2>
-            <p>Diferentes OST de nuestro juego... placeholder</p>
-            <audio src="./assets/sound/letter_from_an_old friend.mp3" controls></audio>
+            <p class="music-info">No es oro todo lo que se ve, también lo que se oye. Además de la increible calidad gráfica, el apartado de sonido también es sorprendente, aquí teneís un adelanto de la banda sonora.</p>
+            <audio controls>
+               <source src="./assets/sound/letter_from_an_old friend.mp3">
+               <source src="./assets/sound/letter-from-an-old-friend.ogg">
+            </audio>
         </section>
     </main>
     
     <footer>
-        <li>
-            <ul>About...</ul>
-            <ul>Algo 2...</ul>
-            <ul>Algo 3...</ul>
-        </li>
+        <h3>Onepage creada por Daniel Mariscal 2ºDAW-A</h3>
     </footer>
 
-
-
-<script>
-    const grande = document.querySelector('.grande')
-    const punto = document.querySelectorAll('.punto')
-    console.log(punto)
-
-    punto.forEach((cadaPunto, i) => {
-        punto[i].addEventListener('click',()=>{
-            
-            let posicion = i
-            let operacion = posicion * -25
-
-            grande.style.transform = `translateX(${operacion}%)`
-
-            punto.forEach( (cadaPunto, i)=>{
-                punto[i].classList.remove('activo')
-            })
-            punto[i].classList.add('activo')
-        })
-    })
-
-    const li = document.querySelectorAll('.li')
-    const bloque = document.querySelectorAll('.bloque')
-
-    li.forEach((cadaLi, i)=>{
-        li[i].addEventListener('click', ()=>{
-            li.forEach( (cadaLi, i)=>{
-                li[i].classList.remove('activo')
-                bloque[i].classList.remove('activo')
-            })
-            li[i].classList.add('activo')
-            bloque[i].classList.add('activo')
-
-
-        })
-    })
-
-
-
-
-
-
-    </script>
 </body>
 </html>
